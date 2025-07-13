@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Services Price List</title>
+    <style>
+        :root {
+            --primary: #4a6fa5;
+            --secondary: #166088;
+            --accent: #ff7e6b;
+            --light: #f8f9fa;
+            --dark: #343a40;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f5f7fa;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        h1 {
+            color: var(--secondary);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        .subtitle {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+        .price-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .price-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        .price-card:hover {
+            transform: translateY(-5px);
+        }
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.2rem;
+        }
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            color: white;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+        .card-title {
+            font-size: 1.3rem;
+            color: var(--secondary);
+            font-weight: 600;
+        }
+        .price-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 1rem 0;
+        }
+        .price-value::before {
+            content: '¥';
+            font-size: 1.2rem;
+            margin-right: 2px;
+        }
+        .price-description {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        .highlight-card {
+            border: 2px solid var(--accent);
+            position: relative;
+            overflow: hidden;
+        }
+        .highlight-tag {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: var(--accent);
+            color: white;
+            padding: 0.2rem 1rem;
+            font-size: 0.8rem;
+            border-bottom-left-radius: 8px;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            .price-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Premium Services</h1>
+            <p class="subtitle">最適なプランをお選びください</p>
+        </header>
+        
+        <div class="price-grid">
+            <div class="price-card">
+                <div class="card-header">
+                    <div class="card-icon">鬼</div>
+                    <h2 class="card-title">鬼キャン</h2>
+                </div>
+                <div class="price-value">30</div>
+                <p class="price-description">鬼のようなキャンバー角度を実現</p>
+            </div>
+            
+            <div class="price-card">
+                <div class="card-header">
+                    <div class="card-icon">C</div>
+                    <h2 class="card-title">コイン</h2>
+                </div>
+                <div class="price-value">50</div>
+                <p class="price-description">課金コイン</p>
+            </div>
+            
+            <div class="price-card">
+                <div class="card-header">
+                    <div class="card-icon">¥</div>
+                    <h2 class="card-title">マネー</h2>
+                </div>
+                <div class="price-value">83</div>
+                <p class="price-description">ゲーム内通貨として使用可能</p>
+            </div>
+            
+            <div class="price-card highlight-card">
+                <div class="highlight-tag">BEST</div>
+                <div class="card-header">
+                    <div class="card-icon">車</div>
+                    <h2 class="card-title">課金車</h2>
+                </div>
+                <div class="price-value">100</div>
+                <p class="price-description">プレミアム車両1台を追加</p>
+            </div>
+            
+            <div class="price-card">
+                <div class="card-header">
+                    <div class="card-icon">E</div>
+                    <h2 class="card-title">エンジン</h2>
+                </div>
+                <div class="price-value">150</div>
+                <p class="price-description">高性能エンジンロックを解除</p>
+            </div>
+            
+            <div class="price-card">
+                <div class="card-header">
+                    <div class="card-icon">P</div>
+                    <h2 class="card-title">パトラン</h2>
+                </div>
+                <div class="price-value">15</div>
+                <p class="price-description">車両1台にパトランを装着</p>
+            </div>
+        </div>
+        
+        <footer>
+            <p>©チーパー君 依頼プラン.</p>
+        </footer>
+    </div>
+
+    <script>
+        // カードにアニメーションを追加
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.price-card');
+            
+            cards.forEach((card, index) => {
+                // スタイル適用を遅延させて順番に表示
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+                
+                // 初期状態を設定
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+        });
+    </script>
+</body>
+</html>
